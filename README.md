@@ -1,4 +1,6 @@
-# XML Validator - Lab 2 (CST8259)
+# xml-validation
+
+ASP.NET Core MVC project for XML validation and restaurant review data, built for the CST8259 Web Programming course.
 
 ## How to Run
 
@@ -9,7 +11,7 @@ Double-click `run.bat` to start the application.
 1. Open Command Prompt (CMD)
 2. Change to the project directory:
    ```
-   cd C:\Users\OO7Ag\Downloads\lab-2
+   cd c:\sem4\web programming-2\lab-3
    ```
 3. Run:
    ```
@@ -23,33 +25,45 @@ Double-click `run.bat` to start the application.
 
 ## Project Description
 
-This is an ASP.NET Core MVC application for validating XML files against an XSD schema.
+This is an ASP.NET Core MVC application for validating XML files against an XSD schema and displaying restaurant, menu, and review data from XML.
 
 ### Features
 - Upload XML and XSD schema files
 - Validate XML against the schema definitions
 - Display detailed validation error information (including line number, column number, and error message)
+- View restaurant details, reviews, and menu items loaded from XML
 
 ### Usage
-1. After starting the project, the browser will open automatically (typically at `https://localhost:5001`)
-2. Upload the XSD and XML files on the home page
+1. After starting the project, the browser will open automatically (typically at `http://localhost:5001`)
+2. Upload the XSD and XML files on the validation page
 3. Click the "Validate XML" button
-4. View the validation results
+4. View the validation results or restaurant overview
 
 ## Project Structure
 ```
 XMLValidator/
 ├── Controllers/
-│   └── HomeController.cs      # Handles XML validation logic
+│   ├── HomeController.cs           # Restaurant overview and pages
+│   └── XmlValidationController.cs  # Handles XML validation logic
 ├── Models/
-│   ├── XMLandSchemaFileUpload.cs  # File upload model
-│   └── XmlValidationError.cs      # Validation error model
+│   ├── XMLandSchemaFileUpload.cs   # File upload model
+│   ├── XmlValidationError.cs       # Validation error model
+│   ├── RestaurantOverviewViewModel.cs
+│   └── RestaurantEditViewModel.cs
 ├── Views/
 │   ├── Home/
-│   │   ├── Index.cshtml           # Upload form page
-│   │   └── ValidationResult.cshtml # Validation result page
+│   │   ├── Index.cshtml            # Restaurant overview page
+│   │   └── Edit.cshtml             # Restaurant edit page
+│   ├── XmlValidation/
+│   │   ├── Index.cshtml            # Upload form page
+│   │   ├── ValidationResult.cshtml # Validation result page
+│   │   └── Success.cshtml          # Success page
 │   └── Shared/
-│       └── _Layout.cshtml         # Shared layout
+│       └── _Layout.cshtml          # Shared layout
+├── Data/
+│   ├── restaurant_review.cs        # XSD-generated C# classes
+│   └── restaurant_review.xml       # Sample restaurant XML
 ├── wwwroot/                        # Static files
 ├── Program.cs                      # Application entry point
 └── XMLValidator.csproj             # Project file
+```
