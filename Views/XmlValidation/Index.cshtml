@@ -1,0 +1,45 @@
+@model XMLValidator.Models.XMLandSchemaFileUpload
+
+@{
+    ViewData["Title"] = "XML Validator";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4">XML Validator</h2>
+        
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
+        
+        <form asp-action="Validate" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="SchemaFile" class="form-label">Schema File</label>
+                <input asp-for="SchemaFile" type="file" accept=".xsd" class="form-control" />
+                <span asp-validation-for="SchemaFile" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="XmlFile" class="form-label">XML File</label>
+                <input asp-for="XmlFile" type="file" accept=".xml" class="form-control" />
+                <span asp-validation-for="XmlFile" class="text-danger"></span>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

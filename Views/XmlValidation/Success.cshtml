@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Validation Success";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4">Validation Successful</h2>
+        
+        <div class="alert alert-success">
+            <p class="mb-0"><strong>Great news!</strong> Your XML file is valid and matches the schema structure.</p>
+            <p class="mb-0 mt-2">All elements, attributes, and values conform to the schema requirements.</p>
+        </div>
+
+        <div class="mt-4">
+            <a asp-action="Index" class="btn btn-primary">Validate Another File</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restaurants xmlns="http://www.algonquincollege.com/cst8259/labs"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.algonquincollege.com/cst8259/labs restaurant_reviews.xsd">
+  <restaurant id="R001">
+    <name>The Gourmet Kitchen</name>
+    <website>https://www.gourmetkitchen.com</website>
+    <address>
+      <street>123 Main Street</street>
+      <city>Ottawa</city>
+      <province>ON</province>
+      <postalCode>K1A 0B1</postalCode>
+    </address>
+    <category>
+      <foodType>Italian</foodType>
+      <priceRange>$$$</priceRange>
+    </category>
+    <reviews>
+      <review id="REV001">
+        <rating>5</rating>
+        <date>2024-01-15</date>
+        <reviewer>John Doe</reviewer>
+        <summary>Excellent food and service!</summary>
+      </review>
+      <review id="REV002">
+        <rating>4</rating>
+        <date>2024-02-20</date>
+        <reviewer>Jane Smith</reviewer>
+        <summary>Great atmosphere, good value</summary>
+      </review>
+    </reviews>
+    <menu lastUpdated="2024-01-01">
+      <section name="Appetizers" order="1">
+        <item id="APP001">
+          <name>Caesar Salad</name>
+          <description>Fresh romaine lettuce with caesar dressing</description>
+          <price>12.99</price>
+        </item>
+        <item id="APP002">
+          <name>Bruschetta</name>
+          <description>Toasted bread with tomatoes and basil</description>
+          <quantityInfo>
+            <servingSize>4 pieces</servingSize>
+            <serves>2-3 people</serves>
+          </quantityInfo>
+          <price>9.99</price>
+        </item>
+      </section>
+      <section name="Main Courses" order="2">
+        <item id="MAIN001">
+          <name>Spaghetti Carbonara</name>
+          <description>Classic Italian pasta with bacon and cream sauce</description>
+          <price>18.99</price>
+        </item>
+      </section>
+    </menu>
+    <statistics>
+      <averageRating>4.5</averageRating>
+      <totalReviews>2</totalReviews>
+    </statistics>
+  </restaurant>
+</restaurants>

@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="hero-section mb-5">
+            <h1 class="display-4 fw-bold mb-3">XML Schema Validator</h1>
+            <p class="lead mb-4">Validate your XML files against XSD schemas quickly and accurately. Ensure your XML documents conform to their defined structure and data types.</p>
+            <a asp-action="Index" class="btn btn-primary btn-lg">Start Validating</a>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="feature-card h-100 p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-file-earmark-check" style="font-size: 3rem; color: #0d6efd;"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-3">Accurate Validation</h3>
+                    <p class="text-muted">Validate XML files against XSD schemas with detailed error reporting including line numbers and column positions.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100 p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-shield-check" style="font-size: 3rem; color: #0d6efd;"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-3">Server-Side Validation</h3>
+                    <p class="text-muted">All validation is performed securely on the server side, ensuring data integrity and security.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100 p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-speedometer2" style="font-size: 3rem; color: #0d6efd;"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-3">Fast & Reliable</h3>
+                    <p class="text-muted">Quick validation process with comprehensive error details to help you fix issues efficiently.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="h4 fw-bold mb-3">How It Works</h2>
+                <ol class="mb-0">
+                    <li class="mb-2">Upload your XSD schema file (.xsd)</li>
+                    <li class="mb-2">Upload the XML file you want to validate (.xml)</li>
+                    <li class="mb-2">Click "Validate XML" to check your file</li>
+                    <li>Review the validation results and fix any errors found</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
